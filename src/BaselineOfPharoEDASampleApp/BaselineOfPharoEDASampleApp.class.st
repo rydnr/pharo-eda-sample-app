@@ -11,6 +11,7 @@ BaselineOfPharoEDASampleApp >> baseline: spec [
 		for: #common
 		do: [ spec blessing: #baseline.
 			self includePharoEDA: spec.
+			self includePharoEDATools: spec.
 			self declarePackagesIn: spec.
 			self declareGroupsIn: spec ]
 ]
@@ -27,7 +28,7 @@ BaselineOfPharoEDASampleApp >> declareGroupsIn: spec [
 BaselineOfPharoEDASampleApp >> declarePackagesIn: spec [
 	spec
 		package: #'EDASA-Domain'
-			with: [ spec requires: #('PharoEDA') ];
+			with: [ spec requires: #('PharoEDA' 'PharoEDATools') ];
 		package: #'EDASA-Domain-Tests'
 			with: [ spec requires: #('EDASA-Domain') ]
 ]
@@ -37,5 +38,13 @@ BaselineOfPharoEDASampleApp >> includePharoEDA: spec [
 	spec
 		baseline: 'PharoEDA'
 		with: [ spec repository: 'github://osoco/pharo-eda:settings' ].
+	^ spec
+]
+
+{ #category : #dependencies }
+BaselineOfPharoEDASampleApp >> includePharoEDATools: spec [
+	spec
+		baseline: 'PharoEDATools'
+		with: [ spec repository: 'github://osoco/pharo-eda-tools:main' ].
 	^ spec
 ]
