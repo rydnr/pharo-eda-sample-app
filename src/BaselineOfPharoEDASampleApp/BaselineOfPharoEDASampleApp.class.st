@@ -23,7 +23,7 @@ BaselineOfPharoEDASampleApp >> declareGroupsIn: spec [
 		group: 'core' with: #(#'EDASA-Domain');
 		group: 'tests' with: #(#'EDASA-Domain-Tests');
 		group: 'publishing' with: #('core' 'tests' 'Pillar' 'PillarCore' 'PillarDocumentModel' 'PillarMicro');
-		group: 'default' with: #('core tests')
+		group: 'default' with: #('core' 'tests')
 ]
 
 { #category : #meta }
