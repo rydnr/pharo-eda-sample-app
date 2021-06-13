@@ -22,7 +22,7 @@ BaselineOfPharoEDASampleApp >> declareGroupsIn: spec [
 	spec
 		group: 'core' with: #(#'EDASA-Domain');
 		group: 'tests' with: #(#'EDASA-Domain-Tests');
-		group: 'publishing' with: #('core' 'tests' 'Pillar' 'PillarCore' "'PillarExporter'");
+		group: 'publishing' with: #('core' 'tests' 'Pillar' 'PillarCore' 'PillarDocumentModel' "'PillarExporter'");
 		group: 'default' with: #('publishing')
 ]
 
