@@ -22,7 +22,7 @@ BaselineOfPharoEDASampleApp >> declareGroupsIn: spec [
 	spec
 		group: 'core' with: #(#'EDASA-Domain');
 		group: 'tests' with: #(#'EDASA-Domain-Tests');
-		group: 'publishing' with: #('core' 'tests' 'Pillar' 'PillarCore' 'PillarDocumentModel' 'PillarExporter');
+		group: 'publishing' with: #('core' 'tests' 'Pillar' 'PillarCore' 'PillarDocumentModel');
 		group: 'default' with: #('publishing')
 ]
 
@@ -59,8 +59,6 @@ BaselineOfPharoEDASampleApp >> includePillar: spec [
 		baseline: 'PillarCore'
 			with: [ spec repository: 'github://pillar-markup/pillar:v8.0.14' ];
 		baseline: 'PillarDocumentModel'
-			with: [ spec repository: 'github://pillar-markup/pillar:v8.0.14' ];
-		baseline: 'PillarExporter'
-			with: [ spec repository: 'github://pillar-markup/pillar:dev-7' ].
+			with: [ spec repository: 'github://pillar-markup/pillar:v8.0.14' ].
 	^ spec
 ]
