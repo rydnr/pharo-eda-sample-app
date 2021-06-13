@@ -38,7 +38,13 @@ task loadPharoEDASampleAppGt(type: EvalSmalltalkExpressionTask, dependsOn: retri
     expression = "Metacello new repository: 'github://osoco/pharo-eda-sample-app:${branchOrTag}'; baseline: 'PharoEDASampleApp'; onConflictUseLoaded; load"
 }
 
-task customizeImage(type: RunSmalltalkScriptTask, dependsOn: loadPharoEDASampleApp) {
+task loadPillarApp(type: EvalSmalltalkExpressionTask, dependsOn: loadPharoEDASampleApp) {
+    pharoPath = customPharoPath
+    commonPharoArgs = customPharoArgs
+    expression = "Metacello new repository: 'github://pillar-markup/pillar:dev-8'; baseline: 'PillarApp'; onConflictUseLoaded; load"
+}
+
+task customizeImage(type: RunSmalltalkScriptTask, dependsOn: loadPillarApp) {
     script = "customize.st"
     pharoPath = customPharoPath
     commonPharoArgs = customPharoArgs
