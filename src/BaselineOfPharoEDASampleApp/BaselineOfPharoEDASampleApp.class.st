@@ -12,6 +12,7 @@ BaselineOfPharoEDASampleApp >> baseline: spec [
 		do: [ spec blessing: #baseline.
 			self includePharoEDA: spec.
 			self includePharoEDATools: spec.
+			self includePillar: spec.
 			self declarePackagesIn: spec.
 			self declareGroupsIn: spec ]
 ]
@@ -21,7 +22,8 @@ BaselineOfPharoEDASampleApp >> declareGroupsIn: spec [
 	spec
 		group: 'core' with: #(#'EDASA-Domain');
 		group: 'tests' with: #(#'EDASA-Domain-Tests');
-		group: 'default' with: #('core' 'tests')
+		group: 'publishing' with: #('core' 'tests' 'Pillar');
+		group: 'default' with: #('publishing')
 ]
 
 { #category : #meta }
@@ -46,5 +48,13 @@ BaselineOfPharoEDASampleApp >> includePharoEDATools: spec [
 	spec
 		baseline: 'PharoEDATools'
 		with: [ spec repository: 'github://osoco/pharo-eda-tools:main' ].
+	^ spec
+]
+
+{ #category : #dependencies }
+BaselineOfPharoEDASampleApp >> includePillar: spec [
+	spec
+		baseline: 'Pillar'
+		with: [ spec repository: 'github://pillar-markup/pillar:v8.0.14' ].
 	^ spec
 ]
