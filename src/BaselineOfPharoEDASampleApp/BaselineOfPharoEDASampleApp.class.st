@@ -55,7 +55,7 @@ BaselineOfPharoEDASampleApp >> includePharoEDATools: spec [
 BaselineOfPharoEDASampleApp >> includePillar: spec [
 	spec
 		baseline: 'Pillar'
-			with: [ spec repository: 'github://pillar-markup/pillar:dev-7' ];
+			with: [ spec repository: 'github://pillar-markup/pillar:v8.0.14' ];
 		baseline: 'PillarApp'
 			with: [ spec repository: 'github://pillar-markup/pillar:dev-7' ];
 		baseline: 'PillarCore'
