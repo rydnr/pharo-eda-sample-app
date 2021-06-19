@@ -44,7 +44,7 @@ task loadPillarApp(type: EvalSmalltalkExpressionTask, dependsOn: loadPharoEDASam
     expression = "[ Metacello new repository: 'github://pillar-markup/pillar:dev-8'; baseline: 'PillarApp'; onConflictUseLoaded; load ] on: MessageNotUnderstood do: [ ]"
 }
 
-task customizeImage(type: RunSmalltalkScriptTask, dependsOn: loadPillarApp) {
+task customizeImage(type: RunSmalltalkScriptTask, dependsOn: loadPharoEDASampleApp) {
     script = "customize.st"
     pharoPath = customPharoPath
     commonPharoArgs = customPharoArgs
