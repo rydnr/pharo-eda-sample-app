@@ -1,6 +1,6 @@
 # PharoEDA Sample App
 
-An app based on [PharoEDA](https://github.com/osoco/pharo-eda "PharoEDA").
+An app based on [PharoEDA](https://github.com/rydnr/pharo-eda "PharoEDA").
 
 ## Motivation
 
@@ -19,7 +19,7 @@ A simple domain consisting of:
 First, load it with Metacello:
 
 ```smalltalk
-Metacello new repository: 'github://osoco/pharo-eda-sample-app:main'; baseline: #PharoEDASampleApp; load
+Metacello new repository: 'github://rydnr/pharo-eda-sample-app:main'; baseline: #PharoEDASampleApp; load
 ```
 
 Then, run it with
