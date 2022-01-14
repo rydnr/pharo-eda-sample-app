@@ -39,7 +39,7 @@ BaselineOfPharoEDASampleApp >> declarePackagesIn: spec [
 BaselineOfPharoEDASampleApp >> includePharoEDA: spec [
 	spec
 		baseline: 'PharoEDA'
-		with: [ spec repository: 'github://osoco/pharo-eda:settings' ].
+		with: [ spec repository: 'github://rydnr/pharo-eda:settings' ].
 	^ spec
 ]
 
@@ -47,7 +47,7 @@ BaselineOfPharoEDASampleApp >> includePharoEDA: spec [
 BaselineOfPharoEDASampleApp >> includePharoEDATools: spec [
 	spec
 		baseline: 'PharoEDATools'
-		with: [ spec repository: 'github://osoco/pharo-eda-tools:main' ].
+		with: [ spec repository: 'github://rydnr/pharo-eda-tools:main' ].
 	^ spec
 ]
 
