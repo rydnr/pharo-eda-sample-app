@@ -80,7 +80,9 @@ BaselineOfPharoEDASampleApp >> includePillar: spec [
 { #category : #actions }
 BaselineOfPharoEDASampleApp >> postload: loader package: packageSpec [
 
-	EDAIconProvider addDefaultLocation:
-		(IceRepository registry detect: [ :each | each name = 'pharo-eda-sample-app' ])
-			location / 'resources' / 'icons'
+	| location |
+	location := (IceRepository registry detect: [ :each | 
+		each name = 'pharo-eda-sample-app' ]) location.
+	EDAIconProvider addDefaultLocation: location / 'resources' / 'icons'.
+	EDACTranslationProvider addDefaultLocation: location / 'resources' / 'l10n'
 ]
