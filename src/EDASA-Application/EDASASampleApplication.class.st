@@ -20,13 +20,19 @@ EDASASampleApplication class >> applicationName [
 { #category : #accessing }
 EDASASampleApplication class >> sample1 [
 
-	^ self withName: 'Sample-1' description: 'Sample 1' andIcon: #app1
+	^ self
+		  withName: 'Sample-1'
+		  description: 'Sample 1'
+		  andIconName: #app1
 ]
 
 { #category : #accessing }
 EDASASampleApplication class >> sample2 [
 
-	^ self withName: 'Sample-2' description: 'Sample 2' andIcon: #app2
+	^ self
+		  withName: 'Sample-2'
+		  description: 'Sample 2'
+		  andIconName: #app2
 ]
 
 { #category : #'reset - events' }
