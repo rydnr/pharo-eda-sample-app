@@ -1,3 +1,16 @@
+"
+**Class**
+
+I'm a baseline to load PharoEDA Sample App.
+
+**Responsibilities**
+
+Guide Metacello to load PharoEDA-Sample-App with its dependencies.
+
+**Collaborators**
+
+Metacello
+"
 Class {
 	#name : #BaselineOfPharoEDASampleApp,
 	#superclass : #BaselineOf,
@@ -77,12 +90,13 @@ BaselineOfPharoEDASampleApp >> includePillar: spec [
 	^ spec
 ]
 
-{ #category : #actions }
+{ #category : #hooks }
 BaselineOfPharoEDASampleApp >> postload: loader package: packageSpec [
 
 	| location |
 	location := (IceRepository registry detect: [ :each | 
-		each name = 'pharo-eda-sample-app' ]) location.
+		             each name = 'pharo-eda-sample-app' ]) location.
 	EDAIconProvider addDefaultLocation: location / 'resources' / 'icons'.
-	EDACTranslationProvider addDefaultLocation: location / 'resources' / 'l10n'
+	EDACTranslationProvider addDefaultLocation:
+		location / 'resources' / 'l10n'
 ]
