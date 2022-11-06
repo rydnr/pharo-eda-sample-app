@@ -6,15 +6,16 @@ Class {
 
 { #category : #baselines }
 BaselineOfPharoEDASampleApp >> baseline: spec [
+
 	<baseline>
-	spec
-		for: #common
-		do: [ spec blessing: #baseline.
-			self includePharoEDA: spec.
-			self includePharoEDATools: spec.
-			self includePillar: spec.
-			self declarePackagesIn: spec.
-			self declareGroupsIn: spec ]
+	spec for: #common do: [ 
+		spec blessing: #baseline.
+		spec postLoadDoIt: #postload:package:.
+		self includePharoEDA: spec.
+		self includePharoEDATools: spec.
+		self includePillar: spec.
+		self declarePackagesIn: spec.
+		self declareGroupsIn: spec ]
 ]
 
 { #category : #meta }
@@ -67,4 +68,12 @@ BaselineOfPharoEDASampleApp >> includePillar: spec [
 		baseline: 'PillarApp'
 			with: [ spec repository: 'github://pillar-markup/pillar:dev-8' ].
 	^ spec
+]
+
+{ #category : #actions }
+BaselineOfPharoEDASampleApp >> postload: loader package: packageSpec [
+
+	EDAIconProvider addDefaultLocation:
+		(IceRepository registry detect: [ :each | each name = 'pharo-eda-sample-app' ])
+			location / 'resources' / 'icons'
 ]
