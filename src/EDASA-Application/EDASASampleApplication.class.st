@@ -11,13 +11,19 @@ Class {
 	#category : #'EDASA-Application'
 }
 
+{ #category : #'instance creation' }
+EDASASampleApplication class >> all [
+
+	self sample1; sample2; sample3
+]
+
 { #category : #accessing }
 EDASASampleApplication class >> applicationName [
 
 	^ 'Sample'
 ]
 
-{ #category : #accessing }
+{ #category : #'instance creation' }
 EDASASampleApplication class >> sample1 [
 
 	^ self
@@ -26,13 +32,22 @@ EDASASampleApplication class >> sample1 [
 		  andIconName: #app1
 ]
 
-{ #category : #accessing }
+{ #category : #'instance creation' }
 EDASASampleApplication class >> sample2 [
 
 	^ self
 		  withName: 'Sample-2'
 		  description: 'Sample 2'
 		  andIconName: #app2
+]
+
+{ #category : #'instance creation' }
+EDASASampleApplication class >> sample3 [
+
+	^ self
+		  withName: 'Sample-3'
+		  description: 'Sample 3'
+		  andIconName: #app3
 ]
 
 { #category : #'reset - events' }
