@@ -65,7 +65,7 @@
       "lazySynchronize": true,
       "forceEager": false,
       "wireProtocolEnabled": false,
-      "enableSingleton": false
+      "enableSingleton": false,
       "concurrentSynchronization": false,
       "headlessMode": true,
       "strategy": "",
