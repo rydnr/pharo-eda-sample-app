@@ -47,5 +47,29 @@
       "wireProtocolEnabled": false,
       "enableSingleton": false
     }
+  },
+  "projections": {
+    "mongodb": {
+      "host": "localhost.test",
+      "port": 27017,
+      "user": "testuser",
+      "password": "testsecret",
+      "database": "",
+      "authenticationMechanism": "SCRAM-SHA-256",
+      "tls": false,
+      "urls": "",
+      "debug": true,
+      "enableReplication": false,
+      "ensuringCurrentOnSave": false,
+      "ensuringCurrentReferencesOnQueries": false,
+      "lazySynchronize": true,
+      "forceEager": false,
+      "wireProtocolEnabled": false,
+      "enableSingleton": false,
+      "concurrentSynchronization": false,
+      "headlessMode": true,
+      "strategy": "",
+      "enableSynchronization": true
+    }
   }
 }
