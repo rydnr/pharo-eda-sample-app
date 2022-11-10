@@ -1,0 +1,51 @@
+{
+  "commandListener": {
+    "stomp": {
+      "host": "localhost",
+      "port": 61613,
+      "user": "devuser",
+      "password": "devsecret",
+      "durable": true,
+      "timeout": 60,
+      "debug": true,
+      "queue": "devcommands",
+      "ack": "client-individual",
+      "prefetchCount": 1
+    }
+  },
+  "eventPublisher": {
+    "stomp": {
+      "host": "localhost",
+      "port": 61613,
+      "user": "devuser",
+      "password": "devsecret",
+      "durable": true,
+      "timeout": 60,
+      "debug": true,
+      "exchange": "devevents",
+      "routingKey": "#",
+      "errorExchange": "deverrors",
+      "errorRoutingKey": "#"
+    }
+  },
+  "eventStore": {
+    "mongodb": {
+      "host": "localhost",
+      "port": 27017,
+      "user": "devuser",
+      "password": "devsecret",
+      "database": "",
+      "authenticationMechanism": "SCRAM-SHA-256",
+      "tls": false,
+      "urls": "",
+      "debug": true,
+      "enableReplication": false,
+      "ensuringCurrentOnSave": false,
+      "ensuringCurrentReferencesOnQueries": false,
+      "lazySynchronize": true,
+      "forceEager": false,
+      "wireProtocolEnabled": false,
+      "enableSingleton": false
+    }
+  }
+}
