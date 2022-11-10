@@ -71,5 +71,8 @@
       "strategy": "",
       "enableSynchronization": true
     }
+  },
+  "logging": {
+    "level": "info"
   }
 }
