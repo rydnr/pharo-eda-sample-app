@@ -50,6 +50,18 @@ EDASASampleApplication class >> sample3 [
 		  andIconName: #app3
 ]
 
+{ #category : #subclassresponsibility }
+EDASASampleApplication >> commandClassPrefix [
+
+	^ 'EDASA'
+]
+
+{ #category : #subclassresponsibility }
+EDASASampleApplication >> eventClassPrefix [
+
+	^ 'EDASA'
+]
+
 { #category : #'reset - events' }
 EDASASampleApplication >> resetEventSubscriptions [
 
