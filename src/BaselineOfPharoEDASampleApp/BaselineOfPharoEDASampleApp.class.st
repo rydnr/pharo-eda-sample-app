@@ -36,7 +36,7 @@ BaselineOfPharoEDASampleApp >> declareGroupsIn: spec [
 
 	spec
 		group: 'core' with: #( #'EDASA-Application' #'EDASA-Domain' );
-		group: 'tests' with: #( #'EDASA-Domain-Tests' );
+		group: 'tests' with: #( #'EDASA-Domain-Tests' #'EDASA-Application-Tests' );
 		group: 'publishing'
 		with: #( 'core' 'tests' 'Pillar' 'PillarCore' 'PillarDocumentModel'
 			   'PillarMicro' );
@@ -52,7 +52,9 @@ BaselineOfPharoEDASampleApp >> declarePackagesIn: spec [
 		package: #'EDASA-Domain-Tests'
 		with: [ spec requires: #( 'EDASA-Domain' ) ];
 		package: #'EDASA-Application'
-		with: [ spec requires: #( 'EDASA-Domain' ) ]	
+		with: [ spec requires: #( 'EDASA-Domain' ) ];
+		package: #'EDASA-Application-Tests'
+		with: [ spec requires: #( 'EDASA-Application' ) ]
 
 ]
 

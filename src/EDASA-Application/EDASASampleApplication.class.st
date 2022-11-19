@@ -62,6 +62,22 @@ EDASASampleApplication >> eventClassPrefix [
 	^ 'EDASA'
 ]
 
+{ #category : #'class initialization' }
+EDASASampleApplication >> initialize [
+
+	super initialize.
+	self commandBuilder: EDASADefaultCommandBuilder new
+]
+
+{ #category : #'generated-v1' }
+EDASASampleApplication >> registerCommandBuilders [
+
+	| builder |
+	builder := EDASADefaultCommandBuilder new.
+	EDACommandBuilderRegistry
+
+]
+
 { #category : #'reset - events' }
 EDASASampleApplication >> resetEventSubscriptions [
 
