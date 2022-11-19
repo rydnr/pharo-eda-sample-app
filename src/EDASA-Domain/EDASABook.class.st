@@ -51,7 +51,7 @@ EDASABook >> handleCreateBook: aCommand [
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #'command handling' }
 EDASABook >> handleCreateBookv1: aCommand [
 
 	<useAsCommandHandlerFor: #EDASACreateBook>
