@@ -11,10 +11,10 @@ EDASATBookTestHelper classSide >> ofTenant: newTenant withAggregateId: newId com
 	result id: UUID new asString.
 	result commandId: newCommandId.
 	result timestamp: DateAndTime now asUTC.
-	result author: newAuthor.
-	result isbn: newIsbn.
-	result title: newTitle.
-	result year: newYear.
+	result author: (newAttributes at: 'author').
+	result isbn: (newAttributes at: 'isbn').
+	result title: (newAttributes at: 'title').
+	result year: (newAttributes at: 'year').
 	^ result
 ]
 
@@ -71,6 +71,7 @@ EDASATBookTestHelper >> buildCreateBookSampleCommand [
 	cmdAttributes at: 'aggregateRootVersion' put: cmdVersion.
 	commandBody at: 'author' ifPresent: [ :v | cmdAttributes at: 'author' put: v ].
 	commandBody at: 'isbn' ifPresent: [ :v | cmdAttributes at: 'isbn' put: v ].
+	commandBody at: 'tenant' ifPresent: [ :v | cmdAttributes at: 'tenant' put: v ].
 	commandBody at: 'title' ifPresent: [ :v | cmdAttributes at: 'title' put: v ].
 	commandBody at: 'year' ifPresent: [ :v | cmdAttributes at: 'year' put: v ].
 	result := EDASACreateBook ofTenant: cmdTenant withCommandId: cmdCommandId aggregateRootVersion: cmdVersion andAttributes: cmdAttributes.

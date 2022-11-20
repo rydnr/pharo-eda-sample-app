@@ -10,6 +10,13 @@ Class {
 	#category : #'EDASA-Domain-Book'
 }
 
+{ #category : #meta }
+EDASABookCreated class >> aggregateRootClass [
+
+	^ EDASABook
+
+]
+
 { #category : #'generated-v1' }
 EDASABookCreated class >> latestVersion [
 
@@ -57,13 +64,13 @@ EDASABookCreated >> isbn: newValue [
 { #category : #'generated-v1' }
 EDASABookCreated >> semanticEquals: anInstance [
 
-	^ self class = anInstance class and: [ self id = anInstance id and: [ self author = anInstance author and: [  self id = anInstance id and: [  self isbn = anInstance isbn and: [  self title = anInstance title and: [  self year = anInstance year and: [  self aggregateRootClass = anInstance aggregateRootClass ] ] ] ] ]] ].
+	^ self class = anInstance class and: [ self id = anInstance id and: [ self author = anInstance author and: [  self id = anInstance id and: [  self isbn = anInstance isbn and: [  self tenant = anInstance tenant and: [  self title = anInstance title and: [  self version = anInstance version and: [  self year = anInstance year and: [  self aggregateRootClass = anInstance aggregateRootClass ] ] ] ] ] ] ]] ].
 ]
 
 { #category : #'generated-v1' }
 EDASABookCreated >> semanticHash [
 
-    ^ self class greaseString hash bitXor:( self id hash bitXor: ((self author hash bitXor: (self id hash bitXor: (self isbn hash bitXor: (self title hash bitXor: (self year hash bitXor: self aggregateRootClass hash)))))))
+    ^ self class greaseString hash bitXor:( self id hash bitXor: ((self author hash bitXor: (self id hash bitXor: (self isbn hash bitXor: (self tenant hash bitXor: (self title hash bitXor: (self version hash bitXor: (self year hash bitXor: self aggregateRootClass hash)))))))))
 ]
 
 { #category : #'generated-v1' }

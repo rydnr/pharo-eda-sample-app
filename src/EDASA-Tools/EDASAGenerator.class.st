@@ -41,7 +41,7 @@ EDASAGenerator >> generateAllForVersion: aVersion inApplication: anEDAApplicatio
 { #category : #api }
 EDASAGenerator >> generateAllInApplication: anEDAApplication [
 
-	^ (1 to: (self retrieveMaxVersionInApplication: anEDAApplication))
+	(1 to: (self retrieveMaxVersionInApplication: anEDAApplication))
 		  do: [ :i | 
 		  self generateAllForVersion: i inApplication: anEDAApplication ]
 		  displayingProgress: [ :i | 

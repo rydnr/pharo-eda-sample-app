@@ -44,8 +44,8 @@ EDASABook >> handleCreateBook: aCommand [
 	theAttrs := self class buildCommonArgsForCommand: aCommand.
 	aCommand author ifNotNil: [ :v | theAttrs at: 'author' put: v ].
 	aCommand year ifNotNil: [ :v | theAttrs at: 'year' put: v ].
-	aCommand isbn ifNotNil: [ :v | theAttrs at: 'isbn' put: v ].
 	aCommand title ifNotNil: [ :v | theAttrs at: 'title' put: v ].
+	aCommand isbn ifNotNil: [ :v | theAttrs at: 'isbn' put: v ].
 	^ EDASABookCreated
 		ofTenant: theTenant withAggregateId: theId commandId: theCommandId andAttributes: theAttrs
 
@@ -80,13 +80,13 @@ EDASABook >> retrieveBookRepository [
 { #category : #'generated-v1' }
 EDASABook >> semanticEquals: anInstance [
 
-	^ self class = anInstance class and: [ self id = anInstance id and: [ self author = anInstance author and: [  self year = anInstance year and: [  self id = anInstance id and: [  self title = anInstance title and: [  self isbn = anInstance isbn ] ] ] ]] ].
+	^ self class = anInstance class and: [ self id = anInstance id and: [ self isbn = anInstance isbn and: [  self version = anInstance version and: [  self author = anInstance author and: [  self title = anInstance title and: [  self year = anInstance year and: [  self tenant = anInstance tenant and: [  self id = anInstance id ] ] ] ] ] ]] ].
 ]
 
 { #category : #'generated-v1' }
 EDASABook >> semanticHash [
 
-    ^ self class greaseString hash bitXor:( self id hash bitXor: ((self author hash bitXor: (self year hash bitXor: (self id hash bitXor: (self title hash bitXor: self isbn hash))))))
+    ^ self class greaseString hash bitXor:( self id hash bitXor: ((self isbn hash bitXor: (self version hash bitXor: (self author hash bitXor: (self title hash bitXor: (self year hash bitXor: (self tenant hash bitXor: self id hash))))))))
 ]
 
 { #category : #'generated-v1' }
