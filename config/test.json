@@ -37,7 +37,7 @@
       "database": "",
       "authenticationMechanism": "SCRAM-SHA-256",
       "tls": false,
-      "urls": "",
+      "urls": "mongodb://localhost:27017/",
       "debug": true,
       "enableReplication": false,
       "ensuringCurrentOnSave": false,
