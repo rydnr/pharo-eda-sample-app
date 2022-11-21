@@ -51,13 +51,6 @@ EDASABook >> handleCreateBook: aCommand [
 
 ]
 
-{ #category : #'command handling' }
-EDASABook >> handleCreateBookv1: aCommand [
-
-	<useAsCommandHandlerFor: #EDASACreateBook>
-	self flag: #TODO
-]
-
 { #category : #'generated-v1' }
 EDASABook >> isbn [
 

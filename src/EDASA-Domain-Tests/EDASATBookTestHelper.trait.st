@@ -83,6 +83,12 @@ EDASATBookTestHelper >> buildCreateBookSampleCommand [
 ]
 
 { #category : #'generated-v1' }
+EDASATBookTestHelper >> buildEDAApplication [
+
+	^ EDASASampleApplication withName: UUIDGenerator next greaseString
+]
+
+{ #category : #'generated-v1' }
 EDASATBookTestHelper >> readBookCreatedFromFile [
 
 	^ self readFile: (FileSystem disk workingDirectory  / 'Sample-1' / 'contracts' / 'events' / 'v1' / 'book-created.example.json')
