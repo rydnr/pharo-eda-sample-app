@@ -17,22 +17,8 @@ Class {
 	#category : #BaselineOfPharoEDASampleApp
 }
 
-{ #category : #baselines }
-BaselineOfPharoEDASampleApp >> baseline: spec [
-
-	<baseline>
-	spec for: #common do: [ 
-		spec blessing: #baseline.
-		spec postLoadDoIt: #postload:package:.
-		self includePharoEDA: spec.
-		self includePharoEDATools: spec.
-		self includePillar: spec.
-		self declarePackagesIn: spec.
-		self declareGroupsIn: spec ]
-]
-
 { #category : #meta }
-BaselineOfPharoEDASampleApp >> declareGroupsIn: spec [
+BaselineOfPharoEDASampleApp class >> declareGroupsIn: spec [
 
 	spec
 		group: 'core' with: #( #'EDASA-Application' #'EDASA-Domain' #'EDASA-Tools');
@@ -45,7 +31,7 @@ BaselineOfPharoEDASampleApp >> declareGroupsIn: spec [
 ]
 
 { #category : #meta }
-BaselineOfPharoEDASampleApp >> declarePackagesIn: spec [
+BaselineOfPharoEDASampleApp class >> declarePackagesIn: spec [
 
 	spec
 		package: #'EDASA-Domain'
@@ -61,7 +47,7 @@ BaselineOfPharoEDASampleApp >> declarePackagesIn: spec [
 ]
 
 { #category : #dependencies }
-BaselineOfPharoEDASampleApp >> includePharoEDA: spec [
+BaselineOfPharoEDASampleApp class >> includePharoEDA: spec [
 	spec
 		baseline: 'PharoEDA'
 		with: [ spec repository: 'github://rydnr/pharo-eda:settings' ].
@@ -69,7 +55,7 @@ BaselineOfPharoEDASampleApp >> includePharoEDA: spec [
 ]
 
 { #category : #dependencies }
-BaselineOfPharoEDASampleApp >> includePharoEDATools: spec [
+BaselineOfPharoEDASampleApp class >> includePharoEDATools: spec [
 	spec
 		baseline: 'PharoEDATools'
 		with: [ spec repository: 'github://rydnr/pharo-eda-tools:main' ].
@@ -77,7 +63,7 @@ BaselineOfPharoEDASampleApp >> includePharoEDATools: spec [
 ]
 
 { #category : #dependencies }
-BaselineOfPharoEDASampleApp >> includePillar: spec [
+BaselineOfPharoEDASampleApp class >> includePillar: spec [
 	spec
 		baseline: 'Pillar'
 			with: [ spec repository: 'github://pillar-markup/pillar:dev-8' ];
@@ -92,6 +78,20 @@ BaselineOfPharoEDASampleApp >> includePillar: spec [
 		baseline: 'PillarApp'
 			with: [ spec repository: 'github://pillar-markup/pillar:dev-8' ].
 	^ spec
+]
+
+{ #category : #baselines }
+BaselineOfPharoEDASampleApp >> baseline: spec [
+
+	<baseline>
+	spec for: #common do: [ 
+		spec blessing: #baseline.
+		spec postLoadDoIt: #postload:package:.
+		self class includePharoEDA: spec;
+		 includePharoEDATools: spec;
+		 includePillar: spec;
+		 declarePackagesIn: spec;
+		 declareGroupsIn: spec ]
 ]
 
 { #category : #hooks }
