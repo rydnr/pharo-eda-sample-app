@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "id": "de57effe-4246-4aee-a96e-fc67e3e48c74",
+    "version": 1,
+    "timestamp": "2022-02-14T00:00:10",
+    "correlationId": "21ad7e44-e886-4e6e-8718-41438c262e9a",
+    "type": "CREATE_BOOK"
+  },
+  "body": {
+    "title": "How to read a book",
+    "author": ["Mortimer J. Adler", "Charles Van Doren"],
+    "isbn": "978-0-671-21209-4",
+    "year": 1940,
+    "version": 0,
+    "tenant": "default"
+  }
+}
