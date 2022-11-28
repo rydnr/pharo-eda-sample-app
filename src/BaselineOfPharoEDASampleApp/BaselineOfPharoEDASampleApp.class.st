@@ -35,12 +35,13 @@ BaselineOfPharoEDASampleApp class >> declarePackagesIn: spec [
 
 	spec
 		package: #'EDASA-Application'
-		with: [ spec requires: #( 'PharoEDA') ];
-		package: #'EDASA-Application-Tests'
-		with: [ spec requires: #( 'EDASA-Application' ) ];
-		package: #'EDASA-Domain' with: [ spec requires: #( 'EDASA-Application' 'PharoEDA' ) ];
+		with: [ spec requires: #( 'PharoEDA' ) ];
+		package: #'EDASA-Domain'
+		with: [ spec requires: #( 'EDASA-Application' 'PharoEDA' ) ];
 		package: #'EDASA-Domain-Tests'
 		with: [ spec requires: #( 'EDASA-Domain' ) ];
+		package: #'EDASA-Application-Tests'
+		with: [ spec requires: #( 'EDASA-Application' 'EDASA-Domain-Tests') ];
 		package: #'EDASA-Tools'
 		with: [ spec requires: #( 'PharoEDATools' ) ]
 ]
