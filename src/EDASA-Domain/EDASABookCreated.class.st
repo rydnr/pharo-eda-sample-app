@@ -1,6 +1,6 @@
 Class {
 	#name : #EDASABookCreated,
-	#superclass : #EDACommandResultEvent,
+	#superclass : #EDASABaseEvent,
 	#instVars : [
 		'author',
 		'year',

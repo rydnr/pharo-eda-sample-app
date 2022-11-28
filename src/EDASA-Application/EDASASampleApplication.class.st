@@ -57,6 +57,12 @@ EDASASampleApplication >> commandClassPrefix [
 ]
 
 { #category : #subclassresponsibility }
+EDASASampleApplication >> eventBaseClass [
+
+	^ EDASABaseEvent
+]
+
+{ #category : #subclassresponsibility }
 EDASASampleApplication >> eventClassPrefix [
 
 	^ 'EDASA'
