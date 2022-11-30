@@ -1,43 +1,45 @@
 {
+  "default": true,
   "commandListener": {
     "stomp": {
-      "host": "localhost",
+      "host": "rabbitmq.dev",
       "port": 61613,
-      "user": "devuser",
+      "user": "sample-1",
       "password": "devsecret",
       "durable": true,
       "timeout": 60,
       "debug": true,
-      "queue": "devcommands",
+      "queue": "to-sample-1",
       "ack": "client-individual",
-      "prefetchCount": 1
+      "prefetchCount": 1,
+      "restartOnErrors": true
     }
   },
   "eventPublisher": {
     "stomp": {
-      "host": "localhost",
+      "host": "rabbitmq.dev",
       "port": 61613,
-      "user": "devuser",
+      "user": "sample-1",
       "password": "devsecret",
       "durable": true,
       "timeout": 60,
       "debug": true,
-      "exchange": "devevents",
+      "exchange": "from-sample-1",
       "routingKey": "#",
-      "errorExchange": "deverrors",
+      "errorExchange": "sample-1-errors",
       "errorRoutingKey": "#"
     }
   },
   "eventStore": {
     "mongodb": {
-      "host": "localhost",
+      "host": "mongodb.dev",
       "port": 27017,
-      "user": "devuser",
+      "user": "sample-1",
       "password": "devsecret",
       "database": "",
       "authenticationMechanism": "SCRAM-SHA-256",
       "tls": false,
-      "urls": "",
+      "urls": "mongodb://mongodb.dev:27017/sample-1-eventstore",
       "debug": true,
       "enableReplication": false,
       "ensuringCurrentOnSave": false,
@@ -50,14 +52,14 @@
   },
   "projections": {
     "mongodb": {
-      "host": "localhost",
+      "host": "mongodb.dev",
       "port": 27017,
-      "user": "devuser",
+      "user": "sample-1",
       "password": "devsecret",
       "database": "",
       "authenticationMechanism": "SCRAM-SHA-256",
       "tls": false,
-      "urls": "",
+      "urls": "mongodb://mongodb.dev:27017/sample-1-projections",
       "debug": true,
       "enableReplication": false,
       "ensuringCurrentOnSave": false,

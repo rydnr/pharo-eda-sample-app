@@ -1,4 +1,5 @@
 {
+  "default": false,
   "commandListener": {
     "stomp": {
       "host": "commandbus",
