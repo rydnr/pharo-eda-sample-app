@@ -9,3 +9,9 @@ EDASABookRepository class >> belongTo: anEDAApplication [
 
 	^ anEDAApplication isKindOf: EDASASampleApplication
 ]
+
+{ #category : #protected }
+EDASABookRepository >> aggregateClass [
+
+	^ EDASABook
+]

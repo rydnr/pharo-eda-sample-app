@@ -64,13 +64,6 @@ EDASABook >> isbn: newValue [
 ]
 
 { #category : #'generated-v1' }
-EDASABook >> retrieveBookRepository [
-
-	^ EDASABookRepository uniqueInstance
-
-]
-
-{ #category : #'generated-v1' }
 EDASABook >> semanticEquals: anInstance [
 
 	^ self class = anInstance class and: [ self id = anInstance id and: [ self isbn = anInstance isbn and: [  self version = anInstance version and: [  self author = anInstance author and: [  self title = anInstance title and: [  self year = anInstance year and: [  self tenant = anInstance tenant and: [  self id = anInstance id ] ] ] ] ] ]] ].
