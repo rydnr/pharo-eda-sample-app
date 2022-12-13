@@ -7,6 +7,6 @@ Class {
 { #category : #meta }
 EDASABookEvent class >> aggregateRootClass [
 
-	<eventStoreCollection: #Book>
+	<eventStoreCollection: 'Book'>
 	^ EDASABook
 ]
