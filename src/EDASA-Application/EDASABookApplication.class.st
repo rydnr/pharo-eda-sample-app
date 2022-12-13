@@ -10,6 +10,15 @@ EDASABookApplication class >> applicationName [
 	^ 'Book'
 ]
 
+{ #category : #'instance creation' }
+EDASABookApplication class >> sample1 [
+
+	^ self
+		  withName: 'Sample-1'
+		  description: 'Sample 1'
+		  andIconName: #app1
+]
+
 { #category : #subclassresponsibility }
 EDASABookApplication >> commandClassPrefix [
 
