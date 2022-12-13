@@ -1,6 +1,6 @@
 Class {
 	#name : #EDASABookCreated,
-	#superclass : #EDASABaseEvent,
+	#superclass : #EDASABookEvent,
 	#instVars : [
 		'author',
 		'year',
@@ -9,13 +9,6 @@ Class {
 	],
 	#category : #'EDASA-Domain-Book'
 }
-
-{ #category : #meta }
-EDASABookCreated class >> aggregateRootClass [
-
-	^ EDASABook
-
-]
 
 { #category : #'generated-v1' }
 EDASABookCreated class >> latestVersion [

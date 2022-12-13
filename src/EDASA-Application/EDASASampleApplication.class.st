@@ -26,7 +26,7 @@ EDASASampleApplication class >> applicationName [
 { #category : #'instance creation' }
 EDASASampleApplication class >> sample1 [
 
-	^ self
+	^ EDASABookApplication
 		  withName: 'Sample-1'
 		  description: 'Sample 1'
 		  andIconName: #app1
