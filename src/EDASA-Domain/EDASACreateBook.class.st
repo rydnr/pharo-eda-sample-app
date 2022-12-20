@@ -39,6 +39,12 @@ EDASACreateBook class >> ofTenant: theTenant withCommandId: theCommandId aggrega
 	^ result
 ]
 
+{ #category : #'aggregate selection' }
+EDASACreateBook >> aggregateSelectionCriteria [
+
+	^ (OrderedCollection with: ('isbn' -> self isbn)) asDictionary
+]
+
 { #category : #'generated-v1' }
 EDASACreateBook >> author [
 
