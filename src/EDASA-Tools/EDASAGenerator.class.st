@@ -6,12 +6,6 @@ Class {
 	#category : #'EDASA-Tools'
 }
 
-{ #category : #configuration }
-EDASAGenerator class >> excludedContracts [
-
-	^ #( )
-]
-
 { #category : #api }
 EDASAGenerator >> packages [
 
