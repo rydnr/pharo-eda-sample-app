@@ -1,5 +1,5 @@
 Class {
 	#name : #EDASABaseEvent,
 	#superclass : #EDACommandResultEvent,
-	#category : #'EDASA-Domain'
+	#category : #'EDASA-Domain-Common'
 }
