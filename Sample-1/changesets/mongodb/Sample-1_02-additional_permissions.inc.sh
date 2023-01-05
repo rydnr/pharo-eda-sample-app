@@ -17,8 +17,6 @@
 #    along with pharo-eda-sample-app.
 #    If not, see <http://www.gnu.org/licenses/>.
 #
-# env: ADMIN_PASSWORD: The password of the admin user.
-defineEnvVar ADMIN_PASSWORD MANDATORY "The password of the admin user" "${ADMIN_USER_PASSWORD}"
-# env: SAMPLE1_PASSWORD: The password of the user the Sample-1 uses to connect.
-defineEnvVar SAMPLE1_PASSWORD MANDATORY "The password of the user the Sample-1 uses to connect" "devsecret"
+# env: ADMIN_USER_PASSWORD: The password of the admin user.
+defineEnvVar ADMIN_USER_PASSWORD MANDATORY "The password of the admin user" "secret"
 # vim: syntax=sh ts=2 sw=2 sts=4 sr noet

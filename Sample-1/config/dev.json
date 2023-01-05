@@ -12,7 +12,7 @@
       "queue": "to-sample-1",
       "ack": "client-individual",
       "prefetchCount": 1,
-      "restartOnErrors": true
+      "restartOnErrors": false
     }
   },
   "eventPublisher": {
@@ -32,21 +32,21 @@
   },
   "eventStore": {
     "mongodb": {
-      "host": "mongodb.dev",
+      "host": "localhost",
       "port": 27017,
-      "user": "sample-1",
-      "password": "devsecret",
-      "database": "",
-      "authenticationMechanism": "SCRAM-SHA-256",
+      "user": "sample1",
+      "password": "secret",
+      "database": "Sample1",
+      "authenticationMechanism": "SCRAM-SHA-1",
       "tls": false,
-      "urls": "mongodb://mongodb.dev:27017/sample-1-eventstore",
+      "urls": "mongodb://localhost:27017/Sample1",
       "debug": true,
       "enableReplication": false,
       "ensuringCurrentOnSave": false,
       "ensuringCurrentReferencesOnQueries": false,
       "lazySynchronize": true,
       "forceEager": false,
-      "wireProtocolEnabled": false,
+      "wireProtocolEnabled": true,
       "enableSingleton": false
     }
   },
@@ -56,10 +56,10 @@
       "port": 27017,
       "user": "sample-1",
       "password": "devsecret",
-      "database": "",
-      "authenticationMechanism": "SCRAM-SHA-256",
+      "database": "Sample1Projections",
+      "authenticationMechanism": "SCRAM-SHA-1",
       "tls": false,
-      "urls": "mongodb://mongodb.dev:27017/sample-1-projections",
+      "urls": "mongodb://mongodb.dev:27017/",
       "debug": true,
       "enableReplication": false,
       "ensuringCurrentOnSave": false,

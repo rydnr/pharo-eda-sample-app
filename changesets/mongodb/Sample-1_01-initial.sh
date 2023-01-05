@@ -213,7 +213,7 @@ addError BOOKFIND_ROLE_DOES_NOT_EXIST "${BOOKFIND_ROLE} role does not exist";
 addError CANNOT_ADD_BOOKINSERT_ROLE "Cannot add the ${BOOKINSERT_ROLE} role";
 addError BOOKINSERT_ROLE_DOES_NOT_EXIST "${BOOKINSERT} role does not exist";
 addError CANNOT_ADD_SAMPLE1_USER "Cannot add the ${SAMPLE1_USER} user";
-addError SAMPLE1_USER_CANNOT_LOG_IN "${SAMPLE1_USER} user cannot log in";
+addError SAMPLE1_USER_CANNOT_LOG_IN "Sample1 user cannot log in";
 addError CANNOT_CREATE_BOOK_ID_INDEX "Cannot create an index on 'id' in ${BOOK_COLLECTION}";
 addError BOOK_ID_INDEX_DOES_NOT_EXIST "The index on attribute 'id' on ${BOOK_COLLECTION} does not exist";
 addError CANNOT_CREATE_BOOK_TIMESTAMP_INDEX "Cannot create an index on 'timestamp' in ${BOOK_COLLECTION}";
